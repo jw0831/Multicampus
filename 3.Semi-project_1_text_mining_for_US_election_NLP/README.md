@@ -70,31 +70,31 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 <p align = "center"><a href="https://drive.google.com/file/d/1RnDWDyFImrlu8hYI__048G--qY-bP8tI/view?usp=sharing" title="NLP project"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
 
-#### 대선과 관련된 텍스트를 분석하여 2020 미국 대통령 선거 결과를 예측
+### 대선과 관련된 텍스트를 분석하여 2020 미국 대통령 선거 결과를 예측
 
 ![](README.assets/4.png)
 
 
 
-#### 수행 세부 목표
+### 수행 세부 목표
 
 ![](README.assets/5.png)
 
 
 
-#### 데이터 수집
+### 데이터 수집
 
 ![](README.assets/7.png)
 
 
 
-#### 자연어 처리과정
+### 자연어 처리과정
 
 ![8](README.assets/8.png)
 
 
 
-#### 단어 빈도수를 통한 워드클라우드 생성
+### 단어 빈도수를 통한 워드클라우드 생성
 
 ![9](README.assets/9.png)
 
@@ -108,7 +108,7 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 
 
-#### 두 후보의 TF-IDF (단어 빈도 - 역 문서 빈도) 분석
+### 두 후보의 TF-IDF (단어 빈도 - 역 문서 빈도) 분석
 
 ![10](README.assets/10.png)
 
@@ -126,7 +126,7 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 
 
-#### 각 후보들에 대한 사람들의 워드클라우드 및 TF-IDF
+### 각 후보들에 대한 사람들의 워드클라우드 및 TF-IDF
 
 ![11](README.assets/11.png)
 
