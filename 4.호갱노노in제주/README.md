@@ -1,4 +1,6 @@
-## 멀티캠퍼스 딥러닝 기반 AI엔지니어링 프로젝트-1
+## 멀티캠퍼스 딥러닝 기반 AI엔지니어링 팀 프로젝트
+
+기간: 2020/10/13~2020/10/22
 
 # 호갱노노 in 제주 
 
@@ -8,7 +10,9 @@
 
 ## 활용기술
 
-- Languages : Python
+- Language : 
+
+  - Python
 
 - Libraries : 
 
@@ -48,21 +52,29 @@
 |조원우| 망고플레이트, 다이닝코드 크롤링 / 발표자료 준비 및 디자인    |
 |박희원|다음, 네이버 API / 감성분석 / 발표자료 준비|
 
-#### 개발진행 순서 : 김진원
+#### 김진원 
 
-[1. Naver 크롤링]()
+- 클릭시 해당 코드로 이동합니다.
 
-[2. 지도에 사용하기 위한 상점 데이터 병합]()
+  [1. 인스타그램 크롤링](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/insta_jeju.ipynb)
 
-[3. 감성데이터 병합]()
+  [2. Naver 크롤링](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/naver_crawling.ipynb)
 
-[4. 제주도 시각화]()
+  [3. 지도에 사용하기 위한 상점 데이터 병합](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/merge%20restaurants.ipynb)
+
+  [4. 감성데이터 병합](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/merge_emotion_list.ipynb)
+
+  [5. 네이버 리뷰 병합](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/merge_naver_reviews.ipynb)
+
+  [6. 읍면동 데이터 처리](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/jeju_EMD_LI_divide.ipynb)
+
+  [7.  제주도 시각화](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/4.호갱노노in제주/김진원/jeju_folium_jw0831.ipynb)
 
 ## 개발 과정 
 
-발표자료 클릭!
+<p align="center">발표자료 클릭!</p>
 
-<p align = "left"><a href="https://github.com/jw0831/Multicampus/tree/main/1.Final-project_seesun" title="jeju project"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
+<p align = "center"><a href="https://drive.google.com/file/d/16NLuMaeAHLZOYhm_f6en-tcNxUsOGCFm/view?usp=sharing" title="jeju project"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
 
 <img src="README.assets/order1.png" style="zoom:100%;" />
 
@@ -91,10 +103,11 @@
 ### 제주도 "읍/면/동/리" 분류와 상권시세 등을 시각화
 
 - 맛집 위치 및 툴팁을통한 가게명 표시
+- 마커 클러스터 기능을 통한 지역별 상점수 시각화
 
 ![jeju1](README.assets/jeju1.png)
 
-- 마커 클러스터 기능을 통한 지역별 상점수 시각화
+- 각 상점별 감성점수 데이터 업데이트
 
 ![jeju2](README.assets/jeju2.png)
 
