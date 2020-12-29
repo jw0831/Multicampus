@@ -1,8 +1,8 @@
-■ 조 편성
-1조 : 정성훈, 박지원, 이찬주, 이동재, 김동현
-2조 : 이지윤, 이학민, 조원우, 이동진, 박희원
-3조 : 김진원, 노용철, 안애솔, 홍세준, 민채정
-4조(개인) : 안재진, 조유정, 조윤석
+■ 조 편성  
+1조 : 정성훈, 박지원, 이찬주, 이동재, 김동현  
+2조 : 이지윤, 이학민, 조원우, 이동진, 박희원  
+3조 : 김진원, 노용철, 안애솔, 홍세준, 민채정  
+4조(개인) : 안재진, 조유정, 조윤석  
 
 # CNN 
 
@@ -24,7 +24,7 @@
 
 4. Junayed, Masum Shah & Jeny, Afsana & Neehal, Nafis & Atik, Syeda & Hossain, Syed. (2019). A Comparative Study of Different CNN Models in City Detection Using Landmark Images. 10.1007/978-981-13-9181-1_48. 
    - 방법론: 
-     - <img src="CNN 응용사례 및 방향성.assets/method1.png" alt="method1" style="zoom:80%;" />
+     - <img src="CNN 응용사례 및 방향성.assets/method1.png" alt="method1" style="zoom:80%;" />
    - 전처리 방법: 과적합을 방지하기위해 인공적으로 데이터를 증식시킴 -> They are Rotate +30, Rotate -30, Translation, Shearing, and Flip.
    - 5400장의 증식된 이미지를 ResNet50은 총 2일이 걸림. (일반적인 컴퓨터 사양 기준)
 5. K. He, X. Zhang, S. Ren and J. Sun, "Deep Residual Learning for Image Recognition," 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, 2016, pp. 770-778, doi: 10.1109/CVPR.2016.90.
