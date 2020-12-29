@@ -96,8 +96,6 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 ### 단어 빈도수를 통한 워드클라우드 생성
 
-![9](README.assets/9.png)
-
 **트럼프** 
 
 - 언론에 관련된 단어를 많이 사용
@@ -106,11 +104,11 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 - 함께 만들어가는 미국을 강조
 
+![9](README.assets/9.png)
+
 
 
 ### 두 후보의 TF-IDF (단어 빈도 - 역 문서 빈도) 분석
-
-![10](README.assets/10.png)
 
 문서 내에서 특정단어의 중요도 기반으로 분석, 결과적으로 각 후보가 중요하게 생각하는 단어를 도출
 
@@ -124,11 +122,11 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 - 미국인의 오늘 하루를 강조
 - 미래를 위한 단어들을 중요하게 생각
 
+![10](README.assets/10.png)
+
 
 
 ### 각 후보들에 대한 사람들의 워드클라우드 및 TF-IDF
-
-![11](README.assets/11.png)
 
 **사람들 -> 트럼프**
 
@@ -142,6 +140,8 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 - 얻다, 한해, 사람들, 미국
 - 바이든의 명성을 까먹었던 둘째 ‘헌터 바이든’ 에 대한 언급
 
+![11](README.assets/11.png)
+
 
 
 ### 텐서보드의 임베딩 프로젝터를 활용한 Word2Vec 시각화
@@ -150,8 +150,6 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 - 두 후보와 연관된 단어들을 시각적으로 확인하기 위해 텐서보드의 임베딩 프로젝터를 활용
 
-![13](README.assets/13.png)
-
 - **트럼프**
 
   - 부정적인 단어가 많이 보임
@@ -159,23 +157,26 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
   - 주변 인물에 단어의 등장은 적은 대신 minesota 와 같은 경합 주에 대한 단어 비중이 높은 것을 확인
 
-![12](README.assets/12.png)
+![13](README.assets/13.png)
 
-- **바이든**
-  - 트럼프,카말라와 같은 주변 인물 단어 확인 가능
-  - sleepy , hide , son 같은 부정적인 단어 확인 가능
+**바이든**
+
+- 트럼프,카말라와 같은 주변 인물 단어 확인 가능
+- sleepy , hide , son 같은 부정적인 단어 확인 가능
+
+![12](README.assets/12.png)
 
 
 
 ### Vader 감성사전을 활용하여 두 후보에 대한 사람들의 감성분석
-
-![14](README.assets/14.png)
 
 - 긍정 / 부정이 명확하게 보이는 트위터를 기준으로 9월1일~10월31일 기간의 감성분석을 실시
 
 - 문장 단위로 구성된 코퍼스에서 각 문장에 대해 감성분석을 하였으며, 일별로 그룹화하여 평균적인 감성점수를 시계열로 나타내었습니다.
 
 - 각 문장의 긍정 부정 중립을 기반으로 컴파운드가 계산되었고, 계산된 컴파운드를 기준으로 감성을 구분지을 수 있었습니다. 
+
+![14](README.assets/14.png)
 
 
 
@@ -197,11 +198,11 @@ This is an text-based AI service conducted by Semi Project 1 in the multi-campus
 
 ### 미래 감성지수 예측을 위한 LSTM 딥러닝 알고리즘 적용
 
-![16](README.assets/16.png)
-
 - 128개의 셀 유닛을 사용하여, 7번의 타임 스텝과 한개의 피처로 Many to One 방식의 모델을 만들었습니다.
 
 - 각 후보에대한 감정을 기반으로 만들어진 2개의 모델을 사용하여, 선거 당일의 각 후보에 대한 감정을 파악하기 위해, 향후 5일을 더 예측해 보았습니다.
+
+![16](README.assets/16.png)
 
 
 
