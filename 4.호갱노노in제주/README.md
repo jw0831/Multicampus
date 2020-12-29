@@ -94,7 +94,7 @@
 
 ### 수집 결과
 
-<img src="README.assets/5.png" style="zoom:70%;" align="center"/>
+<p align="center"><img src="README.assets/5.png" style="zoom:70%;"/></p>
 
 ### 형태소 분석 및 감성사전 업데이트
 
