@@ -15,13 +15,7 @@
 
 - Duration : 2020.11.24 ~ 2020.12.23
 
-[<img src="README.assets/clickbutton.gif" style="zoom:25%;" />](https://github.com/jw0831/Multicampus/tree/main/1.Final-project_seesun)
-
-```
-<a href="https://youtu.be/video_id" title="video text"><img src="path/to/img.png" width="xxx" height="yyy"></a>
-```
-
-<a href="https://github.com/jw0831/Multicampus/tree/main/1.Final-project_seesun" title="seesun final project"><img src="README.assets/clickbutton.gif" style="zoom:25%;" ></a>
+<a href="https://github.com/jw0831/Multicampus/tree/main/1.Final-project_seesun" title="seesun final project"><img src="README.assets/clickbutton.gif" width="120" height="100"></a>
 
 ## 2. <u>세미 2차 프로젝트</u> (CNN)
 
