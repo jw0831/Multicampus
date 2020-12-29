@@ -46,10 +46,12 @@ SNS, 블로그, 이미지 검색서비스에서, 마음에 드는 장소를 찾�
   - matplotlib
 
   - pandas, numpy
-  - pathlib, shutil, natsort
+  - pathlib, shutil, natsort, splitfolders
+  - PyQt5
   - cv2
   - random
-  - os
+  - selenium
+  - os, sys
 
 ## 프로젝트 역할 분담
 
@@ -58,14 +60,69 @@ SNS, 블로그, 이미지 검색서비스에서, 마음에 드는 장소를 찾�
 ### 김진원 (팀장)
 
 - 클릭시 해당 페이지로 이동합니다.
+- **사전조사**
+  - [선행 논문 조사 및 모델 벤치마크](https://github.com/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/CNN%20응용사례%20및%20방향성_김진원.md)
+- **코드작성**
+  - [전처리: 이미지 증식 및 트레이닝 테스트 분리](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/1.Preprocessing/2.image_file_generation.ipynb)
+  - [전처리: 숨겨진파일 제거](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/1.Preprocessing/3.removedot.ipynb)
+  - [랜드마크 분류 모델 ResNet-50 훈련](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/2.CNN_models/Res-Net50withPrediction_camp7.ipynb)
 
-[전처리: 이미지 증식 및 트레이닝 테스트 분리](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/1.Preprocessing/2.image_file_generation.ipynb)
+    - 조기 종료와 학습률 조정을 통해 모델 훈련
+  
+  - [ResNet50의 활성화 채널 및 필터 시각화](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/4.Visualization/ResNet50_필터_특성맵_시각화.ipynb)
+  
+  - [히트맵 시각화](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/4.Visualization/heatmap시각화.ipynb)
+  
+  - [슬라이딩 윈도우를 활용하여 CNN 분류기로 객체 탐지기 만들기](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/4.Visualization/detect_with_classifier_LandMark.ipynb)
+    - 마우스 휠을 빨리 작동하시면 바운딩 박스가 이동하는 효과를 누리실 수 있습니다.
 
-[전처리: 숨겨진파일 제거](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/1.Preprocessing/3.removedot.ipynb)
 
-[랜드마크 분류 모델 ResNet-50 훈련](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/2.CNN_models/Res-Net50withPrediction_camp7.ipynb)
 
-- 조기 종료와 학습률 조정을 통해 모델 훈련
+## 프로젝트 수행방향
+
+<p align="center">발표자료 클릭!</p>
+
+<p align = "center"><a href="https://drive.google.com/file/d/1JeD5fIuqkfmnDnyQf8Z0I6YAEkV6EOkk/view?usp=sharing" title="CNN project"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
+
+### 개발 과정
+
+![5](README.assets/5.png)
+
+
+
+### 선행 논문 파악 및 벤치마크
+
+![6](README.assets/6.png)
+
+### 모델 선택
+
+![7](README.assets/7.png)
+
+![8](README.assets/8.png)
+
+- ResNet 은 잔차 네트워크를 사용해 ILSVRC 2015 대회에서 승리한 3.6% 이하의 톱-5 에러율을 기록한 모델입니다.
+- 주어진 기간동안 제공된 서버 컴퓨터로 구현 가능한 딥러닝 모델을 조사한 결과, 저희는 MobileNet-v1과 ResNet-50을 활용하였습니다.
+  
+  - 모델 비교를 통해 벤치마크가 정확한지 확인해 보았습니다.
+  - 모델 훈련결과, 벤치마크와 비슷한 성능을 보여주었습니다.
+  
+  ![12](README.assets/12.png)
+
+### 데이터 전처리 및 이미지 증식
+
+![9](README.assets/9.png)
+
+- 훈련과정을 진행하는 장소 "SAC아트홀"을 비롯하여 총 392개의 클래스에 대한 이미지 증식을 진행
+
+
+
+### 훈련 및 테스트 데이터 분리
+
+![10](README.assets/10.png)
+
+
+
+### 조기 종료와 학습률 조정을 통해 모델 훈련
 
 ```python
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau
@@ -96,45 +153,65 @@ history=resnet50.fit_generator(
 ```
 
 - **훈련결과**
+  
   - epochs 644 수행 (최고 accuracy : 0.97083336 -552 Eopoch / 최고 val_accuracy : 0.987500011920929-641epoch)
+  
+  <p align="center"><a><img src="README.assets/2.png" width="500" height="300"></a></p>
 
-<p align="center"><a><img src="README.assets/2.png" width="500" height="300"></a></p>
+### 필터 시각화
 
-[ResNet50의 활성화 채널 및 필터 시각화](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/4.Visualization/ResNet50_필터_특성맵_시각화.ipynb)
+- ResNet-50 의 필터는 어떤 모습일지 의문이 들어서 시각화를 진행해 보았습니다.
 
-[히트맵 시각화](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/4.Visualization/heatmap시각화.ipynb)
-
-[슬라이딩 윈도우를 활용하여 CNN 분류기로 객체 탐지기 만들기](https://nbviewer.jupyter.org/github/jw0831/Multicampus/blob/main/2.Semi-project_2_Landmark_finder_using_CNN/4.Visualization/detect_with_classifier_LandMark.ipynb)
-
-- 마우스 휠을 빨리 작동하시면 바운딩 박스가 이동하는 효과를 누리실 수 있습니다.
+![13](README.assets/13.png)
 
 
 
-슬라이딩 윈도우 
+### 활성화 채널 시각화
 
-	- 이미지
+- 필터와 마찬가지로 각 활성화 채널에 대해 시각화를 진행해 보았습니다.
 
-NMS (Non-Maximum Suppression) 을 통한 중복 바운딩 박스 제거
-
-## 프로젝트 수행방향
-
-<p align="center">발표자료 클릭!</p>
-
-<p align = "center"><a href="https://drive.google.com/file/d/1JeD5fIuqkfmnDnyQf8Z0I6YAEkV6EOkk/view?usp=sharing" title="CNN project"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
-
-![5](README.assets/5.png)
+![14](README.assets/14.png)
 
 
 
-![6](README.assets/6.png)
+### 슬라이딩 윈도우를 활용하여 CNN 분류기로 객체 탐지기 만들기
+
+- 분류기에 이미지를 입력하는 방식으로 분류하는 방법 외에도, 슬라이딩 윈도우를 통해 분류해 보고 싶었습니다.
+- 한 이미지를 분류하는데 대략 1분이 넘게 소모되었습니다.
+
+![15](README.assets/15.png)
+
+### 활성화 히트맵 시각화
+
+- 원본 이미지에 클래스 활성화 히트맵을 겹쳐본 결과 낙성대 공원의 동상 주위에 강하게 활성화된 점을 확인해 볼 수 있었습니다.
 
 
 
-![7](README.assets/7.png)
+### 서비스 구현
+
+- 팀원들의 노력으로 그래픽 사용자 인터페이스 (GUI) 가 탄생하였습니다.
+
+<img src="README.assets/16.png" alt="16" style="zoom:50%;" />
+
+### 결과
+
+- 훈련된 랜드마크에 한하여 훈련되지 않은 하나의 이미지를 입력받습니다.
+- 랜드마크 분류 모델은 입력받은 이미지 분류 후에 결과를 출력합니다.
+- 출력된 랜드마크의 위치를 구글 지도상에 표시해 줍니다.
+
+![17](README.assets/17.png)
 
 
 
-![8](README.assets/8.png)
+### 기대효과
+
+랜드마크 분류를 통한 위치를 파악할 수 있는 서비스 구현의 가능성을 보게 되었습니다.
+
+랜드마크 분류 모델을 지속해서 훈련한다면, 여행객의 편의와 GPS의 정확도 향상을 기대해 볼 수 있었습니다.
 
 
+
+###  느낀점
+
+![18](README.assets/18.png)
 
