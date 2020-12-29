@@ -15,6 +15,8 @@
 
 - Duration : 2020.11.24 ~ 2020.12.23
 
+[<img src="README.assets/clickbutton.gif" style="zoom:25%;" />](https://github.com/jw0831/Multicampus/tree/main/1.Final-project_seesun)
+
 ## 2. <u>세미 2차 프로젝트</u> (CNN)
 
 🏰 랜드마크 분류 프로젝트 (우수상:star:)
@@ -27,6 +29,8 @@
 
 - Duration : 2020.11.12 ~ 2020.11.23 
 
+[<img src="README.assets/clickbutton.gif" style="zoom:25%;" />](https://github.com/jw0831/Multicampus/tree/main/2.Semi-project_2_Landmark_finder_using_CNN)
+
 ## 3. <u>세미 1차 프로젝트</u> (NLP)
 
 📰 텍스트 마이닝 프로젝트 (우수상:star:)
@@ -36,6 +40,8 @@
 - Team : 뽑아조
 - Member : **김진원**(팀장), 박지원, 이지윤, 이동재
 - Duration : 2020/10/29~2020/11/11
+
+[<img src="README.assets/clickbutton.gif" style="zoom:25%;" />](https://github.com/jw0831/Multicampus/tree/main/3.Semi-project_1_text_mining_for_US_election_NLP)
 
 ## 4. 멀티캠퍼스 연습 프로젝트
 
@@ -53,5 +59,5 @@
 - Member : 박희원(팀장), **김진원**, 이찬주, 조원우
 - Duration : 2020/10/13~2020/10/22
 
-
+[<img src="README.assets/clickbutton.gif" style="zoom:25%;" />](https://github.com/jw0831/Multicampus/tree/main/4.호갱노노in제주)
 
