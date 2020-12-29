@@ -39,7 +39,7 @@
 
 - Team : 뽑아조
 - Member : **김진원**(팀장), 박지원, 이지윤, 이동재
-- Duration : 2020/10/29~2020/11/11
+- Duration : 2020.10.29~2020.11.11
 
 <p align = "center"><a href="https://github.com/jw0831/Multicampus/tree/main/3.Semi-project_1_text_mining_for_US_election_NLP"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
 
@@ -57,7 +57,7 @@
 
 - Team : 제주사다수
 - Member : 박희원(팀장), **김진원**, 이찬주, 조원우
-- Duration : 2020/10/13~2020/10/22
+- Duration : 2020.10.13~2020.10.22
 
 <p align = "center"><a href="https://github.com/jw0831/Multicampus/tree/main/4.호갱노노in제주"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
 
