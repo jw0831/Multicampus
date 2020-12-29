@@ -43,6 +43,7 @@ Integrative-AI service project from _Deep Learning based AI engineering course_ 
 
 <img src="https://avatars1.githubusercontent.com/u/46684150?s=400&u=8c807418399048f8df2f14fce271f7f0f1fc7226&v=4" alt="mem1" width="70" height="60"/> [jw0831](https://github.com/jw0831) 
 
+- Tried application development using Flutter
 - Prior research review (OCR, STR, CRAFT)
 - Text detection modeling ( pytesseract)
 - Text recognition modeling ( pytesseract)
