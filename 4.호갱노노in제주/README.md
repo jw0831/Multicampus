@@ -60,7 +60,9 @@
 
 ![jeju2](README.assets/jeju2.png)
 
-- **결과_jeju시각화.html** 을 다운받아서 interactive한 결과물을 확인하실 수 있습니다.
+- **결과보기**
+
+<p align = "center"><a href="https://htmlpreview.github.io/?https://github.com/jw0831/Multicampus/blob/main/4.호갱노노in제주/visual_jeju.html" title="visualize_jeju"><img src="README.assets/clickbutton.gif" width="120" height="100"></a></p>
 
 - > 작성자 (김진원)
   >
