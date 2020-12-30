@@ -94,7 +94,7 @@ SNS, 블로그, 이미지 검색서비스에서, 마음에 드는 장소를 찾�
 
 ![6](README.assets/6.png)
 
-### 모델 선택
+### 모델 선정
 
 ![7](README.assets/7.png)
 
