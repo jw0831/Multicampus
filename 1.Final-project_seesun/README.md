@@ -167,7 +167,9 @@ __3. Text recognition model__
 
 ### 문자 인식
 
-<img src="README.assets/1.png" style="zoom:80%;" />
+<p align="center">
+	<img src="README.assets/1.png" style="zoom:80%;" />
+</p>
 
 텍스트 인식 기능은 시각이 불편하신 분들이 눈앞의 문자를 인지하는 데에 도움을 드리기 위해 구현되었습니다. 
 
@@ -185,7 +187,9 @@ OCR, STR 모두 문자탐지와 문자 인식으로 구성되어 있는데요, �
 
 **세 번째**로 한글 인식은 영문 인식보다 어렵습니다. 그 이유는 한글이 영문보다 분류해야 할 글자 수가 차이가 크게 나기 때문입니다. 논문에 의하면 글자 수가 실험기준으로 35배 정도 차이가 나서 한글 인식의 경우 정확도를 높이기가 어렵습니다. 
 
-![7](README.assets/7.png)
+<p align="center">
+	<img src="README.assets/7.png" style="zoom:80%;" />
+</p>
 
 저희 프로젝트에서 텍스트 인식은 일상 생활의 텍스트를 인식해서 알려주는 것을 목적으로 하기 때문에 문서 인식인 OCR보다 STR이 더 적합하다고 판단했습니다.
 
@@ -199,7 +203,9 @@ EAST detector는 openCV 기반의 모델로서 STR 분야에서 꽤 좋은 text 
 
 EAST 탐지기를 사용하여 문자 인식 까지 수행한 결과입니다.
 
-![9](README.assets/9.png)
+<p align="center">
+	<img src="README.assets/9.png" style="zoom:80%;" />
+</p>
 
 왼쪽 이미지를 보시면, 간판과 이미지에 삽입된 문자에 경계 상자로 표시되어 있습니다. 이를 통해 east detector가 실생활 이미지에서 글자를 어느 정도 탐지하는 것을 알 수 있습니다.
 
@@ -209,7 +215,9 @@ EAST 탐지기를 사용하여 문자 인식 까지 수행한 결과입니다.
 
 네이버에서 개발한 CRAFT 탐지기를 사용하여 문자 탐지를 수행한 결과입니다.
 
-![10](README.assets/10.png)
+<p align="center">
+	<img src="README.assets/10.png" style="zoom:80%;" />
+</p>
 
 왼쪽 이미지를 보시면 문서가 곡면 기둥에 부착되어 있고, 기울어져 찍혔음에도 불구하고 잘 탐지가 된 것을 확인할 수 있습니다. 텍스트의 기울기에 맞춰서 경계 상자가 함께 기울어져 있는 점이 인상 깊었습니다.
 
@@ -219,7 +227,9 @@ EAST 탐지기를 사용하여 문자 인식 까지 수행한 결과입니다.
 
 Pytesseract는 tesseract라는 오픈 소스 OCR 엔진을 파이썬에서 사용할 수 있게 하는 패키지입니다. 1984~1994년에 HP 연구소에서 개발되었으며, 2006년부터 구글이 개발을 후원하고 있습니다. 테서렉트는 현재까지도 LSTM과 같은 딥러닝 방식을 통해 텍스트 인식률을 지속해서 개선 중입니다. 그리고 한국어를 지원한다는 장점이 있어서 사용하게 되었습니다.
 
-![12](README.assets/12.png)
+<p align="center">
+	<img src="README.assets/12.png" style="zoom:80%;" />
+</p>
 
 테서렉트가 문서에서 글자를 추출하는 과정에 대해 간단하게 설명하겠습니다. 이미지 데이터가 테서랙트의 구조로 들어가게 되면 기본적인 전처리 과정을 거치게 됩니다. 그리고 LSTM 딥러닝 모델을 통해 글자의 위치를 감지한 후 설정한 언어의 문자 인식모델을 통해 텍스트가 추출됩니다.
 
@@ -229,7 +239,9 @@ Pytesseract는 tesseract라는 오픈 소스 OCR 엔진을 파이썬에서 사�
 
 테서렉트의 문자 인식 성능 향상을 위해 이미지 필터링과 왜곡 보정 같은 전처리 방법을 적용했습니다. 왜곡 보정 방법 중 저희가 집중적으로 연구한 부분은 image rotation 또는 deskew라고 불리는 부분입니다. OCR의 성능은 똑바른 이미지에서 가장 좋으므로 왜곡된 이미지를 회전시키기 위해 다양한 방법을 시도해봤습니다.
 
-![13](README.assets/13.png)
+<p align="center">
+	<img src="README.assets/13.png" style="zoom:80%;" />
+</p>
 
 ### 왜곡 보정 (Deskew)
 
@@ -237,7 +249,9 @@ Pytesseract는 tesseract라는 오픈 소스 OCR 엔진을 파이썬에서 사�
 
 회전된 문서를 원래대로 돌리는 왜곡 보정 방법으로 2가지 방법을 테스트해 보았습니다.
 
-![23](README.assets/23.png)
+<p align="center">
+	<img src="README.assets/23.png" style="zoom:80%;" />
+</p>
 
 ---
 
@@ -246,7 +260,9 @@ Pytesseract는 tesseract라는 오픈 소스 OCR 엔진을 파이썬에서 사�
 - canny edge & hough transform
   - 캡처된 이미지에 캐니 에지 처리 후 허프 변환을 활용하여 문장들을 선으로 감지한 뒤, 각도를 반환받아 왜곡된 각도만큼 회전하는 방법입니다.
 
-![16](README.assets/16.png)
+<p align="center">
+	<img src="README.assets/16.png" style="zoom:80%;" />
+</p>
 
 #### 인식 결과 1 (Text Contour 방법)
 
@@ -254,7 +270,9 @@ Pytesseract는 tesseract라는 오픈 소스 OCR 엔진을 파이썬에서 사�
 
 왼쪽의 커피 쿠폰 이미지에서 “스탬프” , “매장” , “전국” 과 같은 받침을 포함한 몇몇 글자는 잘 인식하지만, 전체적으로 한글을 비슷한 알파벳이나 기호로 인식하는 등의 오류가 있었습니다.
 
-![17](README.assets/17.png)
+<p align="center">
+	<img src="README.assets/17.png" style="zoom:80%;" />
+</p>
 
 #### 인식 결과 2 (canny edge & hough transform)
 
@@ -262,7 +280,9 @@ Pytesseract는 tesseract라는 오픈 소스 OCR 엔진을 파이썬에서 사�
 
 앞서 확인한 text-contour 방식에서는 인식하지 못했던 “1잔당 1개의”와 같이 숫자와 한글이 뒤섞인 글자들도 잘 구별되어 텍스트로 변환되었습니다.
 
-![18](README.assets/18.png)
+<p align="center">
+	<img src="README.assets/18.png" style="zoom:80%;" />
+</p>
 
 ### 문자 인식
 
@@ -270,17 +290,23 @@ Python-tesseract (pytesseract) 문자 인식 라이브러리는 3가지의 문�
 
 저희는 인식된 결과를 경계 상자를 통해 확인하기 위해 image_to_data를 활용하였습니다. image_to_box 또한 경계 상자를 제공하나 문자 단위로 인식하기 때문에, 단어 단위로 인식하는 image_to_data를 활용합니다.
 
-![20](README.assets/20.png)
+<p align="center">
+	<img src="README.assets/20.png" style="zoom:80%;" />
+</p>
 
 ### 인식 결과
 
-![21](README.assets/21.png)
+<p align="center">
+	<img src="README.assets/21.png" style="zoom:80%;" />
+</p>
 
 이미지 전처리와 왜곡 수정과정을 거친 뒤 문자를 인식한 결과입니다.
 
 ### 서비스 결과
 
-![22](README.assets/22.png)
+<p align="center">
+	<img src="README.assets/22.png" style="zoom:80%;" />
+</p>
 
 저희가 개발한 Flask 프레임워크를 사용하는 웹 애플리케이션의 문자인식 결과입니다. 음성 API를 통해 인식된 문자를 음성으로 출력합니다.
 
