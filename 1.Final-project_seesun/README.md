@@ -213,7 +213,7 @@ EAST 탐지기를 사용하여 문자 인식 까지 수행한 결과입니다.
 
 ### CRAFT 탐지기
 
-네이버에서 개발한 CRAFT 탐지기를 사용하여 문자 탐지를 수행한 결과입니다.
+네이버에서 개발한 CRAFT 탐지기를 사용하여 문자를 탐지한 결과입니다.
 
 <p align="center">
 	<img src="README.assets/10.png" style="zoom:80%;" />
