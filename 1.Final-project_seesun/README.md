@@ -150,7 +150,7 @@ __3. Text recognition model__
 ## 6. Getting Started <a id="idx6"></a>
 
 <p align="center">용량이 큰 관계로 다운을 받아 보셔야 합니다.
-<p align="center">맨 마지막 슬라이드에 시연 영상이 포함되어 있습니다
+<p align="center">마지막 슬라이드에 시연 영상이 포함되어 있습니다
 <p align="center">발표자료 클릭!</p>
 
 
