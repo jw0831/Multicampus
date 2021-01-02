@@ -170,7 +170,7 @@ __Example__
 Out : "There are 1 1000won , 1 cat , and 1 dog in front of you"
 ```
 
-<img src="../../Downloads/SeeSun_Multicampus_FinalProject-master/static/show_result.PNG" /> 
+<p align="center"><img src="README.assets/show_result.PNG"/></p>
 
 
 
@@ -186,7 +186,7 @@ __Example__
 Out : "2020년 하반기 4차산업혁명 선도인력 양성 훈련 입과를 환영합니다 multicampus"
 ```
 
-<img src="../../Downloads/SeeSun_Multicampus_FinalProject-master/static/text_result.PNG"/> 
+<p align="center"><img src="README.assets/text_result.PNG"/></p>
 
 ​	
 
