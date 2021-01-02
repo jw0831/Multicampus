@@ -147,6 +147,49 @@ __3. Text recognition model__
 - 사물 인식
 - 음성인식 (API)
 
+### __【Show】 what's in front of you__ 
+
+- by asking with specific keyword "보여줘" , our custom YOLO model will tell you what's in front of you
+
+​	
+
+__Recognizable object table__ 
+
+|    __    |     __     |          __           |         __          |      __      |
+| :------: | :--------: | :-------------------: | :-----------------: | :----------: |
+| 1000 won | 10000 won  |         desk          |        chair        |   sunglass   |
+|  bottle  |  umbrella  |          toy          |      chopstick      |    biker     |
+|   car    | motorcycle |          cat          |         dog         |    person    |
+|  truck   |    bus     | traffic light (green) | traffic light (red) | traffic sign |
+
+ 	
+
+__Example__ 
+
+```python
+Out : "There are 1 1000won , 1 cat , and 1 dog in front of you"
+```
+
+<img src="../../Downloads/SeeSun_Multicampus_FinalProject-master/static/show_result.PNG" /> 
+
+
+
+### __【Read】 what's in front of you__ 
+
+- by asking with specific keyword "읽어줘" , our pytesseract model will read the recognized text in front of you
+
+
+
+__Example__ 
+
+```python
+Out : "2020년 하반기 4차산업혁명 선도인력 양성 훈련 입과를 환영합니다 multicampus"
+```
+
+<img src="../../Downloads/SeeSun_Multicampus_FinalProject-master/static/text_result.PNG"/> 
+
+​	
+
 ## 6. Getting Started <a id="idx6"></a>
 
 <p align="center">용량이 큰 관계로 다운을 받아 보셔야 합니다.
